@@ -2,7 +2,7 @@
 
 Security Acronym Decoder is a focused cybersecurity portfolio project owned by Matthew Faber. The goal is straightforward: A static search tool for decoding common security acronyms, short forms, and overlapping terms so learners can move from memorizing jargon to understanding context quickly. Deployment target is GitHub Pages. The stack is HTML5, CSS3, Vanilla JavaScript, JSON data files, GitHub Pages. Keep the repo easy to review, easy to explain in an interview, and easy to deploy from a clean branch.
 
-When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that a recruiter can understand quickly by opening the repo.
+When helping here, bias toward the smallest useful implementation. Preserve the deliberate no-build-step approach for the frontend. If the project uses Azure Functions, keep Node tooling isolated to `api/` and do not introduce root-level package management. Prefer plain HTML, CSS, and vanilla JavaScript that reads clearly.
 
 What Copilot should help with:
 - Keep acronym data easy to read, sort, and review in plain files.
