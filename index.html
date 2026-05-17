@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Decode security acronyms with fast search, category filters, daily study prompts, and a local pinned study list."
+    />
+    <title>Security Acronym Decoder</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Glossary study tool</p>
+          <h1>Security Acronym Decoder</h1>
+          <p class="lede">
+            Search the alphabet soup, pin terms for review, and jump through related acronyms without leaving the page.
+          </p>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">🌙</span>
+          <span>Theme</span>
+        </button>
+      </header>
+
+      <main id="main-content" class="app-shell">
+        <section class="panel controls-panel" aria-label="Search and filters">
+          <label class="search-label" for="search-input">Search acronyms</label>
+          <input
+            id="search-input"
+            class="search-input big-search"
+            type="search"
+            placeholder="Try SIEM, MFA, zero trust..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <div class="toolbar-row">
+            <p class="section-label chip-heading">Categories</p>
+            <button id="help-button" class="ghost-button" type="button">Keyboard help</button>
+          </div>
+          <div id="category-chips" class="chip-row" role="group" aria-label="Filter by category"></div>
+          <p id="result-count" class="result-count" aria-live="polite">Loading acronyms…</p>
+        </section>
+
+        <section class="panel pinned-panel" aria-label="Pinned acronyms">
+          <div class="section-header">
+            <h2>Pinned study list</h2>
+            <button id="clear-pins" class="ghost-button" type="button">Clear pinned</button>
+          </div>
+          <div id="pinned-list" class="pinned-list"></div>
+          <p id="pinned-empty" class="status">Pin entries with Enter or the pin button to keep a study list in localStorage.</p>
+        </section>
+
+        <section class="panel results-panel" aria-label="Search results">
+          <div id="status" class="status" aria-live="polite">Loading acronyms…</div>
+          <div id="daily-card" class="daily-card" hidden></div>
+          <div id="results" class="card-grid"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <h2>No acronyms match right now</h2>
+            <p>Try a shorter query, a different category, or clear the current state.</p>
+          </div>
+        </section>
+      </main>
+
+      <div id="help-overlay" class="help-overlay" hidden>
+        <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="help-title">
+          <button id="close-help" class="close-help" type="button">Close</button>
+          <h2 id="help-title">Keyboard shortcuts</h2>
+          <ul>
+            <li><strong>/</strong> focus search</li>
+            <li><strong>↑</strong> and <strong>↓</strong> move through result cards</li>
+            <li><strong>Enter</strong> pin the active acronym</li>
+            <li><strong>?</strong> open this help panel</li>
+            <li><strong>Esc</strong> close help</li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        Built by Matthew Faber ·
+        <a href="https://github.com/matthewfaber/security-acronym-decoder">source</a>
+      </footer>
+    </div>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

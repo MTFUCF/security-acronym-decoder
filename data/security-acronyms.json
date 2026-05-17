@@ -1,0 +1,1018 @@
+{
+  "metadata": {
+    "description": "Cybersecurity acronym reference guide",
+    "version": "1.0",
+    "total_acronyms": 84,
+    "date_created": "2026-05-16"
+  },
+  "acronyms": [
+    {
+      "related_acronyms": [
+        "IOA",
+        "TTP",
+        "YARA"
+      ],
+      "category": "Threat",
+      "context": "You'll hear this during incident response: 'We found malware IOCs in the environment.'",
+      "definition": "Observable artifact (IP, domain, hash, file path) associated with malicious activity. Used in threat hunting and incident response.",
+      "expansion": "Indicator of Compromise",
+      "acronym": "IOC"
+    },
+    {
+      "related_acronyms": [
+        "IOC",
+        "TTP",
+        "MITRE"
+      ],
+      "category": "Threat",
+      "context": "IOA is more about 'what happened' (lateral movement, data collection) vs IOC 'what's present' (file hash, IP).",
+      "definition": "Behavioral pattern or activity chain indicating an active attack, as opposed to just presence of malicious code (IOC).",
+      "expansion": "Indicator of Attack",
+      "acronym": "IOA"
+    },
+    {
+      "related_acronyms": [
+        "IOC",
+        "IOA",
+        "APT"
+      ],
+      "category": "Threat",
+      "context": "MITRE ATT&CK framework documents threat actor TTPs.",
+      "definition": "Adversary's modus operandi—what they target, how they attack, and tools/malware they use. Forms basis of threat profiles.",
+      "expansion": "Tactics, Techniques, and Procedures",
+      "acronym": "TTP"
+    },
+    {
+      "related_acronyms": [
+        "XDR",
+        "MDR",
+        "SIEM"
+      ],
+      "category": "Endpoint",
+      "context": "Modern alternative to antivirus; provides visibility into process execution, file activity, network connections.",
+      "definition": "Security software deployed on devices detecting and remediating threats through behavior monitoring, threat hunting, and automated response.",
+      "expansion": "Endpoint Detection and Response",
+      "acronym": "EDR"
+    },
+    {
+      "related_acronyms": [
+        "EDR",
+        "MDR",
+        "SIEM"
+      ],
+      "category": "SIEM",
+      "context": "Evolution of EDR; Microsoft Defender XDR is a major example.",
+      "definition": "Unified platform correlating signals across endpoints, networks, clouds, and identities to detect sophisticated attacks end-to-end.",
+      "expansion": "Extended Detection and Response",
+      "acronym": "XDR"
+    },
+    {
+      "related_acronyms": [
+        "EDR",
+        "XDR",
+        "SOC"
+      ],
+      "category": "Ops",
+      "context": "Good for organizations without mature in-house SOC.",
+      "definition": "Outsourced 24/7 threat hunting and response service. Third-party SOC analyzes logs/alerts and responds to incidents.",
+      "expansion": "Managed Detection and Response",
+      "acronym": "MDR"
+    },
+    {
+      "related_acronyms": [
+        "SOAR",
+        "XDR",
+        "EDR"
+      ],
+      "category": "SIEM",
+      "context": "Microsoft Sentinel, Splunk, ELK are examples.",
+      "definition": "Log aggregation and analysis platform collecting data from all sources, enabling correlation detection and compliance reporting.",
+      "expansion": "Security Information and Event Management",
+      "acronym": "SIEM"
+    },
+    {
+      "related_acronyms": [
+        "SIEM",
+        "XDR",
+        "MTTD"
+      ],
+      "category": "SIEM",
+      "context": "Reduces MTTR by automating manual triage steps.",
+      "definition": "Platform automating incident response playbooks, ticketing integration, and enrichment. Paired with SIEM for efficient triage.",
+      "expansion": "Security Orchestration, Automation and Response",
+      "acronym": "SOAR"
+    },
+    {
+      "related_acronyms": [
+        "SSO",
+        "PAM",
+        "IAM"
+      ],
+      "category": "Identity",
+      "context": "Critical control; reduces account takeover risk by ~99%.",
+      "definition": "Authentication requiring multiple independent factors (password, phone, biometric) to verify user identity.",
+      "expansion": "Multi-Factor Authentication",
+      "acronym": "MFA"
+    },
+    {
+      "related_acronyms": [
+        "MFA",
+        "SAML",
+        "OAuth"
+      ],
+      "category": "Identity",
+      "context": "Entra ID SSO to Microsoft 365, Salesforce, custom apps.",
+      "definition": "Authentication mechanism allowing one login to access multiple applications/systems without re-authentication.",
+      "expansion": "Single Sign-On",
+      "acronym": "SSO"
+    },
+    {
+      "related_acronyms": [
+        "PIM",
+        "JIT",
+        "IAM"
+      ],
+      "category": "Identity",
+      "context": "Includes password vaults, MFA, session recording, JIT elevation.",
+      "definition": "Controls governing access to and usage of high-privilege accounts (admins, service accounts, developers).",
+      "expansion": "Privileged Access Management",
+      "acronym": "PAM"
+    },
+    {
+      "related_acronyms": [
+        "SSO",
+        "PAM",
+        "RBAC"
+      ],
+      "category": "Identity",
+      "context": "Entra ID is a cloud IAM platform.",
+      "definition": "Broader discipline managing user identities, provisioning, authentication, authorization, and deprovisioning across systems.",
+      "expansion": "Identity and Access Management",
+      "acronym": "IAM"
+    },
+    {
+      "related_acronyms": [
+        "ABAC",
+        "IAM",
+        "ACL"
+      ],
+      "category": "Identity",
+      "context": "Simplifies management; users inherit role permissions.",
+      "definition": "Access control model granting permissions based on assigned roles (Admin, Editor, Viewer) rather than individual users.",
+      "expansion": "Role-Based Access Control",
+      "acronym": "RBAC"
+    },
+    {
+      "related_acronyms": [
+        "RBAC",
+        "ZTA",
+        "IAM"
+      ],
+      "category": "Identity",
+      "context": "More flexible than RBAC; Entra Conditional Access is attribute-based.",
+      "definition": "Fine-grained access control using attributes (user, resource, environment) and policies to make access decisions.",
+      "expansion": "Attribute-Based Access Control",
+      "acronym": "ABAC"
+    },
+    {
+      "related_acronyms": [
+        "SASE",
+        "SSE",
+        "PAM"
+      ],
+      "category": "Identity",
+      "context": "Modern security baseline; 'never trust, always verify.'",
+      "definition": "Security model assuming no implicit trust inside or outside network; every access request authenticated and authorized independently.",
+      "expansion": "Zero Trust Architecture",
+      "acronym": "ZTA"
+    },
+    {
+      "related_acronyms": [
+        "SSE",
+        "ZTA",
+        "CASB"
+      ],
+      "category": "Network",
+      "context": "Replaces VPN + on-prem appliances for remote work.",
+      "definition": "Cloud-native architecture combining network security (firewall, DLP) and WAN optimization in a single service.",
+      "expansion": "Secure Access Service Edge",
+      "acronym": "SASE"
+    },
+    {
+      "related_acronyms": [
+        "SASE",
+        "CASB",
+        "DLP"
+      ],
+      "category": "Network",
+      "context": "Part of SASE architecture.",
+      "definition": "Cloud-delivered security services (web filtering, malware prevention, DLP) at edge, not inside network.",
+      "expansion": "Security Service Edge",
+      "acronym": "SSE"
+    },
+    {
+      "related_acronyms": [
+        "DLP",
+        "SSE",
+        "SASE"
+      ],
+      "category": "Cloud",
+      "context": "Microsoft Cloud App Security (Defender for Cloud Apps) is a CASB.",
+      "definition": "Proxy/broker between users and SaaS detecting anomalies, enforcing policies, and preventing data exfiltration.",
+      "expansion": "Cloud Access Security Broker",
+      "acronym": "CASB"
+    },
+    {
+      "related_acronyms": [
+        "CASB",
+        "IRM",
+        "DLPC"
+      ],
+      "category": "Compliance",
+      "context": "Works on email, cloud, endpoints, networks.",
+      "definition": "Policy-driven detection and blocking of sensitive data (PII, trade secrets) from leaving the organization.",
+      "expansion": "Data Loss Prevention",
+      "acronym": "DLP"
+    },
+    {
+      "related_acronyms": [
+        "CWPP",
+        "CNAPP",
+        "IaC"
+      ],
+      "category": "Cloud",
+      "context": "Microsoft Defender for Cloud includes CSPM.",
+      "definition": "Continuous scanning of cloud infrastructure (AWS, Azure, GCP) for misconfigs, vulnerabilities, compliance violations.",
+      "expansion": "Cloud Security Posture Management",
+      "acronym": "CSPM"
+    },
+    {
+      "related_acronyms": [
+        "CSPM",
+        "CNAPP",
+        "K8s"
+      ],
+      "category": "Cloud",
+      "context": "Defender for Cloud includes both CSPM and CWPP.",
+      "definition": "Runtime protection of cloud workloads (containers, VMs, serverless) from threats and exploits.",
+      "expansion": "Cloud Workload Protection Platform",
+      "acronym": "CWPP"
+    },
+    {
+      "related_acronyms": [
+        "CWPP",
+        "CSPM",
+        "SAST"
+      ],
+      "category": "Cloud",
+      "context": "Emerging category; covers DevSecOps + runtime protection.",
+      "definition": "Unified platform protecting cloud-native apps (containers, serverless) from development through runtime.",
+      "expansion": "Cloud-Native Application Protection Platform",
+      "acronym": "CNAPP"
+    },
+    {
+      "related_acronyms": [
+        "SCA",
+        "CVE",
+        "SSPLY"
+      ],
+      "category": "Ops",
+      "context": "Required by EOs; important for supply chain risk management.",
+      "definition": "Inventory of components, libraries, and dependencies in software; used for vulnerability and license tracking.",
+      "expansion": "Software Bill of Materials",
+      "acronym": "SBOM"
+    },
+    {
+      "related_acronyms": [
+        "SOAR",
+        "MDR",
+        "MTTD"
+      ],
+      "category": "Ops",
+      "context": "Center of gravity for incident response and threat hunting.",
+      "definition": "Team or facility monitoring security alerts 24/7, investigating incidents, and coordinating response.",
+      "expansion": "Security Operations Center",
+      "acronym": "SOC"
+    },
+    {
+      "related_acronyms": [
+        "MTTD",
+        "MTBF",
+        "RTO"
+      ],
+      "category": "Ops",
+      "context": "Industry goal: < 4 hours for confirmed incidents.",
+      "definition": "Average time from incident discovery to remediation/resolution. Key metric for incident response effectiveness.",
+      "expansion": "Mean Time To Respond",
+      "acronym": "MTTR"
+    },
+    {
+      "related_acronyms": [
+        "MTTR",
+        "DWELL",
+        "RTO"
+      ],
+      "category": "Ops",
+      "context": "Industry average: 200+ days; advanced orgs: < 1 day.",
+      "definition": "Average time from attack start to detection. Reduced by better monitoring and threat intelligence.",
+      "expansion": "Mean Time To Detect",
+      "acronym": "MTTD"
+    },
+    {
+      "related_acronyms": [
+        "CVSS",
+        "CWE",
+        "NVD"
+      ],
+      "category": "Crypto",
+      "context": "CVE-2021-1234 format; basis for CVSS scoring and patch management.",
+      "definition": "Standardized identifier for publicly disclosed software vulnerabilities. Assigned by NVD.",
+      "expansion": "Common Vulnerabilities and Exposures",
+      "acronym": "CVE"
+    },
+    {
+      "related_acronyms": [
+        "CVE",
+        "CWE",
+        "EPSS"
+      ],
+      "category": "Crypto",
+      "context": "CVSS 9+ = critical; drives patch priority.",
+      "definition": "Numerical score (0–10) indicating severity of a vulnerability based on exploitability and impact.",
+      "expansion": "Common Vulnerability Scoring System",
+      "acronym": "CVSS"
+    },
+    {
+      "related_acronyms": [
+        "CVE",
+        "CVSS",
+        "OWASP"
+      ],
+      "category": "Crypto",
+      "context": "Complements CVE (specific instance vs. class of weakness).",
+      "definition": "Standardized list of software weaknesses (e.g., SQL injection, buffer overflow) underlying vulnerabilities.",
+      "expansion": "Common Weakness Enumeration",
+      "acronym": "CWE"
+    },
+    {
+      "related_acronyms": [
+        "CWE",
+        "SANS",
+        "NIST"
+      ],
+      "category": "General",
+      "context": "OWASP Top 10 Web and API are essential security baselines.",
+      "definition": "Non-profit focused on web application security. Publishes Top 10 risks, testing guides, and secure coding standards.",
+      "expansion": "Open Worldwide Application Security Project",
+      "acronym": "OWASP"
+    },
+    {
+      "related_acronyms": [
+        "ISO",
+        "CSF",
+        "CIS"
+      ],
+      "category": "General",
+      "context": "NIST CSF is widely adopted globally for governance; SP 800-53 for federal systems.",
+      "definition": "US government agency publishing security frameworks (CSF 2.0, SP 800 series) and cryptography standards.",
+      "expansion": "National Institute of Standards and Technology",
+      "acronym": "NIST"
+    },
+    {
+      "related_acronyms": [
+        "NIST",
+        "IEC",
+        "SOC2"
+      ],
+      "category": "General",
+      "context": "ISO 27001 certification valued by enterprises and auditors.",
+      "definition": "International standards body. ISO 27001 is global information security management standard.",
+      "expansion": "International Organization for Standardization",
+      "acronym": "ISO"
+    },
+    {
+      "related_acronyms": [
+        "SOC1",
+        "SOC3",
+        "AUDIT"
+      ],
+      "category": "Compliance",
+      "context": "Type I = point-in-time; Type II = operating effectiveness over period.",
+      "definition": "Audit standard for service providers assessing controls over security, availability, processing integrity, confidentiality, privacy.",
+      "expansion": "Service Organization Control 2",
+      "acronym": "SOC2"
+    },
+    {
+      "related_acronyms": [
+        "CCPA",
+        "HIPAA",
+        "RGPD"
+      ],
+      "category": "Compliance",
+      "context": "Applies globally to EU residents' data; fines up to 4% revenue.",
+      "definition": "EU privacy regulation requiring consent, data minimization, breach notification, and subject rights (access, deletion, portability).",
+      "expansion": "General Data Protection Regulation",
+      "acronym": "GDPR"
+    },
+    {
+      "related_acronyms": [
+        "GDPR",
+        "HITECH",
+        "PHI"
+      ],
+      "category": "Compliance",
+      "context": "US only; fines – per violation; BAAs required with vendors.",
+      "definition": "US healthcare privacy law protecting PHI (patient health info). Requires encryption, audit logs, access controls, breach notification.",
+      "expansion": "Health Insurance Portability and Accountability Act",
+      "acronym": "HIPAA"
+    },
+    {
+      "related_acronyms": [
+        "GDPR",
+        "PCI",
+        "VISA"
+      ],
+      "category": "Compliance",
+      "context": "Not law but enforced by card networks; Levels 1–4 based on transaction volume.",
+      "definition": "Industry standard for protecting credit card data. Includes network segmentation, encryption, access controls, monitoring.",
+      "expansion": "Payment Card Industry Data Security Standard",
+      "acronym": "PCI-DSS"
+    },
+    {
+      "related_acronyms": [
+        "SQL",
+        "SIEM",
+        "Sentinel"
+      ],
+      "category": "SIEM",
+      "context": "Essential skill for Sentinel SOC analysts; used in hunting, detection rules, and dashboards.",
+      "definition": "Microsoft's query language for log analysis in Sentinel and Defender XDR. SQL-like syntax for power users.",
+      "expansion": "Kusto Query Language",
+      "acronym": "KQL"
+    },
+    {
+      "related_acronyms": [
+        "JIT",
+        "PAM",
+        "RBAC"
+      ],
+      "category": "Identity",
+      "context": "Windows Server feature; complements PAM for admin security.",
+      "definition": "PowerShell-based framework limiting admin privilege to specific commands; reduces surface for privilege escalation.",
+      "expansion": "Just Enough Administration",
+      "acronym": "JEA"
+    },
+    {
+      "related_acronyms": [
+        "JEA",
+        "PAM",
+        "PIM"
+      ],
+      "category": "Identity",
+      "context": "Azure AD PIM provides JIT elevation for cloud/Azure resources.",
+      "definition": "Temporary privilege elevation (e.g., elevate admin rights for 4 hours). Reduces standing privilege exposure.",
+      "expansion": "Just-In-Time",
+      "acronym": "JIT"
+    },
+    {
+      "related_acronyms": [
+        "JIT",
+        "PAM",
+        "RBAC"
+      ],
+      "category": "Identity",
+      "context": "Different from standing admin accounts; time-limited and logged.",
+      "definition": "Azure AD feature managing temporary elevations of privileged roles. Requires MFA, approval, audit trail.",
+      "expansion": "Privileged Identity Management",
+      "acronym": "PIM"
+    },
+    {
+      "related_acronyms": [
+        "gMSA",
+        "IAM",
+        "PAM"
+      ],
+      "category": "Identity",
+      "context": "Better security than hardcoded passwords; often paired with gMSA (Group Managed Service Account).",
+      "definition": "Special Windows service account (domain-managed, auto-password rotation) for service-to-service authentication.",
+      "expansion": "Managed Service Account",
+      "acronym": "MSA"
+    },
+    {
+      "related_acronyms": [
+        "OAuth",
+        "OIDC",
+        "SSO"
+      ],
+      "category": "Identity",
+      "context": "Common in enterprise SSO; Office 365 federation uses SAML.",
+      "definition": "XML-based standard for federated authentication. IdP (identity provider) issues assertions to SP (service provider).",
+      "expansion": "Security Assertion Markup Language",
+      "acronym": "SAML"
+    },
+    {
+      "related_acronyms": [
+        "SAML",
+        "OIDC",
+        "JWT"
+      ],
+      "category": "Identity",
+      "context": "Google/GitHub login uses OAuth; different from SAML.",
+      "definition": "Token-based delegation standard. Users grant apps access without sharing passwords. Foundation of modern API auth.",
+      "expansion": "Open Authorization",
+      "acronym": "OAuth"
+    },
+    {
+      "related_acronyms": [
+        "OAuth",
+        "OIDC",
+        "API"
+      ],
+      "category": "Crypto",
+      "context": "Compact alternative to session cookies; used in APIs and microservices.",
+      "definition": "Stateless, cryptographically-signed token (header.payload.signature) for authentication and authorization.",
+      "expansion": "JSON Web Token",
+      "acronym": "JWT"
+    },
+    {
+      "related_acronyms": [
+        "SSL",
+        "HTTPS",
+        "PKI"
+      ],
+      "category": "Crypto",
+      "context": "HTTPS uses TLS; replaced deprecated SSL in 1999.",
+      "definition": "Encryption protocol securing communication between client and server. Asymmetric handshake + symmetric encryption.",
+      "expansion": "Transport Layer Security",
+      "acronym": "TLS"
+    },
+    {
+      "related_acronyms": [
+        "CA",
+        "TLS",
+        "X.509"
+      ],
+      "category": "Crypto",
+      "context": "Certificate authorities issue and revoke digital certificates.",
+      "definition": "System of CAs, certificates, and keys for digital signatures and encryption. Basis of trust on internet.",
+      "expansion": "Public Key Infrastructure",
+      "acronym": "PKI"
+    },
+    {
+      "related_acronyms": [
+        "ECC",
+        "AES",
+        "DH"
+      ],
+      "category": "Crypto",
+      "context": "Foundation of digital signatures and asymmetric encryption.",
+      "definition": "Public-key cryptographic algorithm. 2048-bit RSA considered secure for key generation; key size growing.",
+      "expansion": "Rivest-Shamir-Adleman",
+      "acronym": "RSA"
+    },
+    {
+      "related_acronyms": [
+        "RSA",
+        "ECC",
+        "DES"
+      ],
+      "category": "Crypto",
+      "context": "Fast; used in disk encryption (BitLocker), password managers.",
+      "definition": "Symmetric encryption algorithm (Rijndael). AES-256 is standard for classified US government data.",
+      "expansion": "Advanced Encryption Standard",
+      "acronym": "AES"
+    },
+    {
+      "related_acronyms": [
+        "RSA",
+        "ECDH",
+        "DH"
+      ],
+      "category": "Crypto",
+      "context": "Increasingly preferred for IoT and edge; modern TLS supports ECDH.",
+      "definition": "Public-key algorithm using elliptic curve math. Shorter keys (256-bit ECC ~= 2048-bit RSA) with same security.",
+      "expansion": "Elliptic Curve Cryptography",
+      "acronym": "ECC"
+    },
+    {
+      "related_acronyms": [
+        "SHA",
+        "MD5",
+        "HASH"
+      ],
+      "category": "Crypto",
+      "context": "Used in OAuth, APIs, file integrity checks.",
+      "definition": "Message authentication code using hash function + secret key. Verifies integrity and authenticity.",
+      "expansion": "Hash-Based Message Authentication Code",
+      "acronym": "HMAC"
+    },
+    {
+      "related_acronyms": [
+        "MD5",
+        "HMAC",
+        "HASH"
+      ],
+      "category": "Crypto",
+      "context": "SHA-256 standard; SHA-1 deprecated for signatures.",
+      "definition": "Cryptographic hash function (SHA-1, SHA-256). Produces fixed-size digest; sensitive to input changes.",
+      "expansion": "Secure Hash Algorithm",
+      "acronym": "SHA"
+    },
+    {
+      "related_acronyms": [
+        "ZTA",
+        "SASE",
+        "IPSec"
+      ],
+      "category": "Network",
+      "context": "Being replaced by Zero Trust access (no implicit trust behind tunnel).",
+      "definition": "Encrypted tunnel between client and network, hiding traffic from ISP/public internet. Legacy remote access tool.",
+      "expansion": "Virtual Private Network",
+      "acronym": "VPN"
+    },
+    {
+      "related_acronyms": [
+        "DLP",
+        "CWPP",
+        "API"
+      ],
+      "category": "Network",
+      "context": "Azure WAF, CloudFlare WAF; protects APIs and web services.",
+      "definition": "Proxy filtering HTTP traffic to/from web apps. Blocks SQL injection, XSS, DDoS, scrapers.",
+      "expansion": "Web Application Firewall",
+      "acronym": "WAF"
+    },
+    {
+      "related_acronyms": [
+        "SOAR",
+        "XDR",
+        "EDR"
+      ],
+      "category": "SIEM",
+      "context": "Cornerstone of SOC operations.",
+      "definition": "Log aggregation + threat detection + compliance reporting platform.",
+      "expansion": "Security Information and Event Management",
+      "acronym": "SIEM"
+    },
+    {
+      "related_acronyms": [
+        "IOC",
+        "HASH",
+        "Regex"
+      ],
+      "category": "Threat",
+      "context": "Used in malware research, EDR, forensics; open-source community-driven.",
+      "definition": "Pattern matching language for malware detection. Rules describe file/process indicators.",
+      "expansion": "Yet Another Recursive Algorithm",
+      "acronym": "YARA"
+    },
+    {
+      "related_acronyms": [
+        "TTP",
+        "IOC",
+        "IOA"
+      ],
+      "category": "Threat",
+      "context": "APT28, APT29, etc. are known threat groups.",
+      "definition": "Sophisticated threat actor (often nation-state) conducting long-duration intrusions targeting specific goals.",
+      "expansion": "Advanced Persistent Threat",
+      "acronym": "APT"
+    },
+    {
+      "related_acronyms": [
+        "C2",
+        "Backdoor",
+        "Malware"
+      ],
+      "category": "Threat",
+      "context": "Examples: Agent Tesla, Cobalt Strike (post-exploitation framework).",
+      "definition": "Malware providing attacker remote shell access to compromised device. Used for C2 and lateral movement.",
+      "expansion": "Remote Access Trojan",
+      "acronym": "RAT"
+    },
+    {
+      "related_acronyms": [
+        "RAT",
+        "Beacon",
+        "Botnet"
+      ],
+      "category": "Threat",
+      "context": "Disrupting C2 is key incident response goal.",
+      "definition": "Infrastructure (servers, domains) attackers use to command compromised systems. Core of attack persistence.",
+      "expansion": "Command and Control",
+      "acronym": "C2"
+    },
+    {
+      "related_acronyms": [
+        "Phishing",
+        "Spoofing",
+        "Fraud"
+      ],
+      "category": "Threat",
+      "context": "FBI estimates + in losses; primarily phishing-based.",
+      "definition": "Social engineering attack compromising business email to trick employees into wire transfers, credential surrender, or data theft.",
+      "expansion": "Business Email Compromise",
+      "acronym": "BEC"
+    },
+    {
+      "related_acronyms": [
+        "RAT",
+        "C2",
+        "Malware"
+      ],
+      "category": "Threat",
+      "context": "Mirai, Emotet are infamous botnets.",
+      "definition": "Network of compromised devices (bots) controlled centrally by attacker. Used for DDoS, spam, cryptomining.",
+      "expansion": "Bot Network",
+      "acronym": "Botnet"
+    },
+    {
+      "related_acronyms": [
+        "SSH",
+        "VPN",
+        "PAM"
+      ],
+      "category": "General",
+      "context": "Exposed RDP is high-risk; use MFA, conditional access, bastion hosts.",
+      "definition": "Windows remote access protocol. Common attack vector (weak credentials, unpatched); requires segmentation + NLA.",
+      "expansion": "Remote Desktop Protocol",
+      "acronym": "RDP"
+    },
+    {
+      "related_acronyms": [
+        "RDP",
+        "Telnet",
+        "PAM"
+      ],
+      "category": "General",
+      "context": "Standard for Linux/Unix admin; key-based auth > passwords.",
+      "definition": "Encrypted remote command shell protocol. Better security than Telnet. Public-key auth + stronger ciphers recommended.",
+      "expansion": "Secure Shell",
+      "acronym": "SSH"
+    },
+    {
+      "related_acronyms": [
+        "DNSSEC",
+        "C2",
+        "Exfiltration"
+      ],
+      "category": "Network",
+      "context": "DNS sinkhole, filtering important defensive controls.",
+      "definition": "Protocol translating domain names (google.com) to IP addresses. Often exploited for C2, data exfiltration, DDoS.",
+      "expansion": "Domain Name System",
+      "acronym": "DNS"
+    },
+    {
+      "related_acronyms": [
+        "TCP",
+        "UDP",
+        "CIDR"
+      ],
+      "category": "Network",
+      "context": "Basis for TCP/UDP; tracking IP addresses key for threat intel.",
+      "definition": "Core protocol for routing data packets across internet. IPv4 (32-bit) vs. IPv6 (128-bit).",
+      "expansion": "Internet Protocol",
+      "acronym": "IP"
+    },
+    {
+      "related_acronyms": [
+        "UDP",
+        "IP",
+        "HTTP"
+      ],
+      "category": "Network",
+      "context": "Three-way handshake (SYN, SYN-ACK, ACK); connection-tracking firewalls inspect.",
+      "definition": "Connection-oriented protocol ensuring ordered, reliable delivery (handshake, acks). Used by HTTP, SMTP, RDP, SSH.",
+      "expansion": "Transmission Control Protocol",
+      "acronym": "TCP"
+    },
+    {
+      "related_acronyms": [
+        "TCP",
+        "IP",
+        "DNS"
+      ],
+      "category": "Network",
+      "context": "Can be exploited for DDoS amplification attacks.",
+      "definition": "Connectionless protocol; fast but unreliable (no retransmits). Used by DNS, NTP, gaming for speed over accuracy.",
+      "expansion": "User Datagram Protocol",
+      "acronym": "UDP"
+    },
+    {
+      "related_acronyms": [
+        "HTTPS",
+        "TLS",
+        "REST"
+      ],
+      "category": "Network",
+      "context": "Cleartext HTTP should not carry sensitive data; always use HTTPS.",
+      "definition": "Unencrypted protocol for web communication. HTTPS wraps HTTP in TLS encryption.",
+      "expansion": "HyperText Transfer Protocol",
+      "acronym": "HTTP"
+    },
+    {
+      "related_acronyms": [
+        "API",
+        "HTTP",
+        "JSON"
+      ],
+      "category": "General",
+      "context": "Modern standard for web/cloud APIs; security requires authentication (OAuth, tokens).",
+      "definition": "Architectural style for APIs using HTTP verbs (GET, POST, PUT, DELETE) and stateless requests.",
+      "expansion": "Representational State Transfer",
+      "acronym": "REST"
+    },
+    {
+      "related_acronyms": [
+        "REST",
+        "OAuth",
+        "WAF"
+      ],
+      "category": "General",
+      "context": "API auth/rate limiting/validation essential.",
+      "definition": "Interface allowing applications to communicate. Security critical; often targets for data theft, injection.",
+      "expansion": "Application Programming Interface",
+      "acronym": "API"
+    },
+    {
+      "related_acronyms": [
+        "SQLi",
+        "CSRF",
+        "WAF"
+      ],
+      "category": "General",
+      "context": "OWASP Top 10; input validation and output encoding mitigate.",
+      "definition": "Web app vulnerability allowing injection of malicious JavaScript into pages viewed by other users.",
+      "expansion": "Cross-Site Scripting",
+      "acronym": "XSS"
+    },
+    {
+      "related_acronyms": [
+        "XSS",
+        "CSRF",
+        "WAF"
+      ],
+      "category": "General",
+      "context": "OWASP Top 1; parameterized queries and input validation prevent.",
+      "definition": "Web app vulnerability allowing SQL command injection through unsanitized user input (login form, search).",
+      "expansion": "SQL Injection",
+      "acronym": "SQLi"
+    },
+    {
+      "related_acronyms": [
+        "XSS",
+        "SQLi",
+        "CORS"
+      ],
+      "category": "General",
+      "context": "OWASP Top 10; CSRF tokens mitigate.",
+      "definition": "Attacker tricks user (while logged in) into making unwanted requests (money transfer, password change).",
+      "expansion": "Cross-Site Request Forgery",
+      "acronym": "CSRF"
+    },
+    {
+      "related_acronyms": [
+        "CSRF",
+        "SOP",
+        "CORS"
+      ],
+      "category": "General",
+      "context": "Misconfigured CORS (allow *) permits unauthorized cross-origin requests.",
+      "definition": "Browser mechanism controlling cross-domain API requests. Allows servers to whitelist origins.",
+      "expansion": "Cross-Origin Resource Sharing",
+      "acronym": "CORS"
+    },
+    {
+      "related_acronyms": [
+        "CORS",
+        "CSP",
+        "Sandbox"
+      ],
+      "category": "General",
+      "context": "Fundamental browser sandbox; CORS is controlled exception.",
+      "definition": "Browser security restriction preventing scripts on one domain from accessing data on another.",
+      "expansion": "Same-Origin Policy",
+      "acronym": "SOP"
+    },
+    {
+      "related_acronyms": [
+        "XSS",
+        "WAF",
+        "Headers"
+      ],
+      "category": "General",
+      "context": "Example: 'script-src self https:' allows scripts only from same origin or HTTPS.",
+      "definition": "HTTP header allowing servers to restrict sources of content (scripts, styles, images) to mitigate XSS.",
+      "expansion": "Content Security Policy",
+      "acronym": "CSP"
+    },
+    {
+      "related_acronyms": [
+        "BIOS",
+        "UEFI",
+        "Rootkit"
+      ],
+      "category": "Endpoint",
+      "context": "UEFI + Secure Boot harder to compromise than legacy BIOS.",
+      "definition": "First sector of disk containing boot code and partition table. Attacker can inject bootkit malware here.",
+      "expansion": "Master Boot Record",
+      "acronym": "MBR"
+    },
+    {
+      "related_acronyms": [
+        "BIOS",
+        "MBR",
+        "SecureBoot"
+      ],
+      "category": "Endpoint",
+      "context": "Secure Boot prevents unsigned bootkit; attackers target UEFI vulnerabilities.",
+      "definition": "Modern firmware (replaces BIOS) with security features (Secure Boot). Supports larger disks, faster boot.",
+      "expansion": "Unified Extensible Firmware Interface",
+      "acronym": "UEFI"
+    },
+    {
+      "related_acronyms": [
+        "BitLocker",
+        "SecureBoot",
+        "Attestation"
+      ],
+      "category": "Endpoint",
+      "context": "Windows 11 requires TPM 2.0; enables Device Guard, Credential Guard.",
+      "definition": "Hardware chip storing encryption keys, device identity. Basis for device attestation and disk encryption (BitLocker).",
+      "expansion": "Trusted Platform Module",
+      "acronym": "TPM"
+    },
+    {
+      "related_acronyms": [
+        "TPM",
+        "Attestation",
+        "MBR"
+      ],
+      "category": "Endpoint",
+      "context": "Measured Boot uses PCR for integrity verification.",
+      "definition": "TPM register measuring firmware/software state. PCR mismatch indicates boot compromise.",
+      "expansion": "Platform Configuration Register",
+      "acronym": "PCR"
+    },
+    {
+      "related_acronyms": [
+        "Privilege",
+        "Elevation",
+        "Admin"
+      ],
+      "category": "Endpoint",
+      "context": "Widely bypassed but still valuable defense-in-depth layer.",
+      "definition": "Windows security feature prompting for elevation when apps attempt admin operations.",
+      "expansion": "User Access Control",
+      "acronym": "UAC"
+    },
+    {
+      "related_acronyms": [
+        "RBAC",
+        "ABAC",
+        "Permissions"
+      ],
+      "category": "Identity",
+      "context": "Windows NTFS ACLs, Azure role assignments both use ACL concepts.",
+      "definition": "List of permissions (who can do what) on a resource (file, folder, object).",
+      "expansion": "Access Control List",
+      "acronym": "ACL"
+    },
+    {
+      "related_acronyms": [
+        "ASLR",
+        "Shellcode",
+        "ROP"
+      ],
+      "category": "Endpoint",
+      "context": "Standard on modern CPUs; complemented by ASLR for mitigation.",
+      "definition": "Processor feature marking memory regions as non-executable, preventing shellcode injection attacks.",
+      "expansion": "Data Execution Prevention",
+      "acronym": "DEP"
+    },
+    {
+      "related_acronyms": [
+        "DEP",
+        "ROP",
+        "Exploit"
+      ],
+      "category": "Endpoint",
+      "context": "Windows, Linux both support ASLR; increases exploit complexity.",
+      "definition": "Technique randomizing memory layout of processes/libraries, making ROP/shellcode exploits harder.",
+      "expansion": "Address Space Layout Randomization",
+      "acronym": "ASLR"
+    },
+    {
+      "related_acronyms": [
+        "DEP",
+        "ASLR",
+        "Shellcode"
+      ],
+      "category": "Threat",
+      "context": "Sophisticated; used by advanced malware/exploits.",
+      "definition": "Exploit technique using existing code snippets (gadgets) to bypass DEP, execute attacker payload.",
+      "expansion": "Return-Oriented Programming",
+      "acronym": "ROP"
+    }
+  ]
+}
