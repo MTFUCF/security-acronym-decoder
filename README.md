@@ -115,6 +115,6 @@ See `TESTING.md` for the checklist used for local browser review.
 ## Author
 
 **Matthew Faber**  
-Matthew Faber builds hands-on cybersecurity portfolio projects that turn study material into recruiter-friendly demos.
+Matthew Faber builds hands-on cybersecurity portfolio projects.
 
 
