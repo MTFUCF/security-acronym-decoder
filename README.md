@@ -16,7 +16,7 @@ https://mtfucf.github.io/security-acronym-decoder/
 - Category filter chips for quick topic narrowing
 - Result cards with definitions, context, and clickable related acronyms
 - Deterministic acronym-of-the-day prompt when no search is active
-- Local pinned study list plus keyboard shortcuts for search, navigation, pinning, and help
+- Local pinned study list plus keyboard shortcuts for search, navigation, and pinning
 
 ## How to run locally
 

@@ -21,9 +21,6 @@ const pinnedList = document.querySelector('#pinned-list');
 const pinnedEmpty = document.querySelector('#pinned-empty');
 const clearPinsButton = document.querySelector('#clear-pins');
 const dailyCard = document.querySelector('#daily-card');
-const helpOverlay = document.querySelector('#help-overlay');
-const helpButton = document.querySelector('#help-button');
-const closeHelp = document.querySelector('#close-help');
 const themeToggle = document.querySelector('#theme-toggle');
 
 let syncingHash = false;
@@ -171,11 +168,6 @@ function pinAcronym(acronym) {
   render();
 }
 
-function openHelp(forceOpen = true) {
-  helpOverlay.hidden = !forceOpen;
-  if (forceOpen) closeHelp.focus();
-}
-
 function dailyEntry() {
   const dateString = new Intl.DateTimeFormat('en-CA').format(new Date());
   const seed = [...dateString].reduce((sum, char) => sum + char.charCodeAt(0), 0);
@@ -297,14 +289,6 @@ clearPinsButton.addEventListener('click', () => {
 });
 
 themeToggle.addEventListener('click', toggleTheme);
-helpButton.addEventListener('click', () => openHelp(true));
-closeHelp.addEventListener('click', () => {
-  openHelp(false);
-  searchInput.focus();
-});
-helpOverlay.addEventListener('click', (event) => {
-  if (event.target === helpOverlay) openHelp(false);
-});
 
 window.addEventListener('hashchange', () => {
   if (syncingHash) return;
@@ -316,19 +300,6 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('keydown', (event) => {
   const tagName = document.activeElement?.tagName;
   const isTyping = ['INPUT', 'TEXTAREA', 'SELECT'].includes(tagName);
-
-  if (event.key === '?' && !isTyping) {
-    event.preventDefault();
-    openHelp(true);
-    return;
-  }
-
-  if (event.key === 'Escape' && !helpOverlay.hidden) {
-    event.preventDefault();
-    openHelp(false);
-    searchInput.focus();
-    return;
-  }
 
   if (event.key === '/' && !isTyping) {
     event.preventDefault();

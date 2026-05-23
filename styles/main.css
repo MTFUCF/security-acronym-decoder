@@ -105,8 +105,7 @@ article:focus-visible {
 }
 
 .site-header,
-.panel,
-.help-dialog {
+.panel {
   border: 1px solid var(--border);
   background: var(--surface);
   box-shadow: var(--shadow);
@@ -158,8 +157,7 @@ h1 {
 
 .lede,
 .definition-copy,
-.daily-card,
-.help-dialog li {
+.daily-card {
   line-height: 1.65;
 }
 
@@ -172,8 +170,7 @@ h1 {
 .ghost-button,
 .chip,
 .pin-button,
-.related-chip,
-.close-help {
+.related-chip {
   border: 1px solid var(--border);
   background: var(--surface-strong);
   color: var(--text);
@@ -182,8 +179,7 @@ h1 {
 
 .theme-toggle,
 .ghost-button,
-.pin-button,
-.close-help {
+.pin-button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -339,37 +335,6 @@ h1 {
   border: 1px dashed var(--border);
   border-radius: 1.25rem;
   text-align: center;
-}
-
-.help-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.45);
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-  z-index: 30;
-}
-
-/* Re-assert the HTML `hidden` attribute over the class `display: grid` above. */
-.help-overlay[hidden] {
-  display: none;
-}
-
-.help-dialog {
-  width: min(520px, 100%);
-  border-radius: 1.5rem;
-  padding: 1.25rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.help-dialog ul {
-  padding-left: 1.2rem;
-}
-
-.close-help {
-  justify-self: end;
 }
 
 .site-footer {
