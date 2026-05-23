@@ -6,6 +6,10 @@ A searchable glossary for the alphabet soup of cybersecurity terms.
 
 Security Acronym Decoder is a static study tool for quickly translating common cybersecurity shorthand into plain-English definitions, context, and related terms. It helps learners move beyond memorizing jargon by making overlapping acronyms easier to search, compare, and revisit.
 
+## Live demo
+
+https://mtfucf.github.io/security-acronym-decoder/
+
 ## Features
 
 - Big fuzzy-friendly search over acronym and expansion text
