@@ -351,6 +351,11 @@ h1 {
   z-index: 30;
 }
 
+/* Re-assert the HTML `hidden` attribute over the class `display: grid` above. */
+.help-overlay[hidden] {
+  display: none;
+}
+
 .help-dialog {
   width: min(520px, 100%);
   border-radius: 1.5rem;
